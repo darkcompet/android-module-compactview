@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+	<declare-styleable name="DkThemeAttrs">
+		<attr name="dk_color_layout_bkg" format="color" />
+	</declare-styleable>
+</resources>

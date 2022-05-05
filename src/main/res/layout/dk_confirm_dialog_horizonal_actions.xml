@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout>
+<FrameLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:id="@+id/dk_fullground"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@color/semi_transparent_black"
+	android:clickable="true"
+	android:focusable="true">
+
+	<!-- Rounded dialog -->
+
+	<tool.compet.compactview.DkCompactLinearLayout
+		android:id="@+id/dk_background"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center"
+		android:orientation="vertical"
+		android:background="?attr/dk_color_layout_bkg">
+
+		<!-- Header -->
+
+		<FrameLayout
+			android:id="@+id/dk_header"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content">
+
+			<TextView
+				android:id="@+id/dk_title"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textColor="?attr/colorPrimaryDark"
+				android:textStyle="bold"
+				android:padding="12dp"
+				android:gravity="center"
+				android:layout_gravity="left|center_vertical"/>
+
+		</FrameLayout>
+
+		<!-- Body -->
+
+		<FrameLayout
+			android:id="@+id/dk_body"
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			android:layout_weight="1">
+
+			<TextView
+				android:id="@+id/dk_message"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:gravity="start|center_vertical"
+				android:scrollbars="vertical"
+				android:layout_gravity="center"
+				android:padding="8dp"
+				android:minLines="3" />
+
+		</FrameLayout>
+
+		<!-- Footer (buttons) -->
+
+		<androidx.constraintlayout.widget.ConstraintLayout
+			android:id="@+id/dk_footer"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content">
+
+			<Button
+				style="@style/Widget.AppCompat.Button.Borderless.Colored"
+				android:id="@+id/dk_cancel"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				app:layout_constraintHorizontal_weight="1"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintEnd_toStartOf="@id/dk_reset"
+				app:layout_constraintTop_toTopOf="parent"
+				app:layout_constraintBottom_toBottomOf="parent"
+				android:layout_margin="0dp"
+				android:text="@string/cancel"
+				android:textColor="?attr/colorAccent" />
+
+			<Button
+				style="@style/Widget.AppCompat.Button.Borderless.Colored"
+				android:id="@+id/dk_reset"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				app:layout_constraintHorizontal_weight="1"
+				app:layout_constraintStart_toEndOf="@id/dk_cancel"
+				app:layout_constraintEnd_toStartOf="@id/dk_ok"
+				app:layout_constraintTop_toTopOf="parent"
+				app:layout_constraintBottom_toBottomOf="parent"
+				android:layout_margin="0dp"
+				android:text="@string/reset"
+				android:textColor="?attr/colorAccent" />
+
+			<Button
+				style="@style/Widget.AppCompat.Button.Borderless.Colored"
+				android:id="@+id/dk_ok"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				app:layout_constraintHorizontal_weight="1"
+				app:layout_constraintStart_toEndOf="@id/dk_reset"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintTop_toTopOf="parent"
+				app:layout_constraintBottom_toBottomOf="parent"
+				android:layout_margin="0dp"
+				android:text="@string/ok"
+				android:textColor="?attr/colorAccent" />
+
+		</androidx.constraintlayout.widget.ConstraintLayout>
+
+	</tool.compet.compactview.DkCompactLinearLayout>
+
+</FrameLayout>
+</layout>
