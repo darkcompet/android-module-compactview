@@ -4,6 +4,8 @@ plugins {
 }
 
 android {
+	namespace 'tool.compet.compactview'
+
 	compileSdk 31
 
 	defaultConfig {
